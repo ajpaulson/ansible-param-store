@@ -38,8 +38,6 @@ class LookupModule(LookupBase):
                     raise AnsibleError('Invalid parameter')
                 else:
                     val = response['Parameters'][0]['Value']
-            except Exception as e:
-                raise AnsibleError('Encountered exception
                 # Check SSM parameter store here
             except Exception as e:
                 raise AnsibleError('Encountered exception while fetching {0}: {1}'.format(term, e.message))
